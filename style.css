@@ -1,0 +1,55 @@
+
+/*estilo geral*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: #000000;
+    height:100vh;
+}
+
+.interface{
+max-width: 1280px;
+margin: 0 auto;
+}
+
+.flex{
+    display:flex;
+}
+
+/*estilo do cabeçalho*/
+header{
+    padding: 40px 0;
+}
+
+header> .interface{
+    display :flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header a{
+    color: #fff;
+    text-decoration: none;
+}
+header nav ul{
+    list-style: none;
+}   
+
+header nav ul li{
+    display: inline-block;
+    padding: 0  40px;
+}
+header .btn-contato button{
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    background: #00f800;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    
+}
