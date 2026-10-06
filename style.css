@@ -1,49 +1,37 @@
 
-/*estilo geral*/
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* estilo geral */
+html {
+    scroll-behavior: smooth;
 }
 
-body{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     background: #000000;
-    height:100vh;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
 }
 
-.interface{
-max-width: 1280px;
-margin: 0 auto;
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
-.flex{
-    display:flex;
+button:hover {
+    box-shadow: 0px 0px 8px #00f800;
+    transform: scale(1.05);
 }
 
-/*estilo do cabeçalho*/
-header{
-    padding: 40px 0;
+.flex {
+    display: flex;
 }
 
-header> .interface{
-    display :flex;
-    align-items: center;
-    justify-content: space-between;
-}
-header a{
-    color: #fff;
-    text-decoration: none;
-}
-header nav ul{
-    list-style: none;
-}   
-
-header nav ul li{
-    display: inline-block;
-    padding: 0  40px;
-}
-header .btn-contato button{
+.btn-contato button {
     padding: 10px 20px;
     font-size: 16px;
     font-weight: 600;
@@ -51,5 +39,276 @@ header .btn-contato button{
     border: 0;
     border-radius: 30px;
     cursor: pointer;
-    
+    transition: .2s;
+}
+
+/* estilo do cabeçalho */
+header {
+    padding: 20px 4%;
+    width: 100%;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .2s;
+}
+
+header a:hover {
+    color: #00f800;
+}
+
+/* estilo do topo do site */
+section.topo-do-site {
+    padding: 40px 4%;
+    color: #fff;
+}
+
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.txt-topo-site h1 {
+    font-size: 38px;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+.txt-topo-site h1 span {
+    color: #00f800;
+}
+
+.txt-topo-site p {
+    color: #fff;
+    margin: 40px 0;
+    font-size: 18px;
+}
+
+.img-topo-site img {
+    width: 400px;
+    max-width: 100%;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 20px;
+    }
+}
+
+/* estilo do sobre */
+img {
+    width: 250px;
+}
+
+section.sobre {
+    padding: 40px 4%;
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre {
+    color: #fff;
+}
+
+section.sobre .txt-sobre h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+section.sobre .txt-sobre h2 span {
+    color: #00f800;
+    display: block;
+}
+
+.sobre .txt-sobre p {
+    text-align: justify;
+}
+
+.btn-social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #00f800;
+    color: #000;
+    text-decoration: none;
+    transition: .2s;
+    box-shadow: 0 0 0 transparent;
+}
+
+.btn-social a:hover {
+    box-shadow: 0px 0px 8px #00f800;
+    transform: scale(1.12);
+}
+
+.social-icon {
+    font-size: 28px;
+    line-height: 1;
+    color: #000;
+}
+
+.github-link {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #00f800;
+    color: #000;
+    text-decoration: none;
+}
+
+.sobre .txt-sobre .btn-social button {
+    width: 120px;
+    height: 52px;
+    border-radius: 30px;
+    border: 0;
+    background-color: #00f800;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* estilo dos projetos */
+section.projetos {
+    padding: 40px 4%;
+}
+
+section.projetos h2 {
+    font-size: 38px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+section.projetos .flex {
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.projeto {
+    flex: 1 1 300px;
+    min-height: 220px;
+    background: #111111;
+    border: 1px solid #00f800;
+    border-radius: 18px;
+    padding: 25px;
+    transition: background-color 0.2s ease;
+}
+
+.projeto:hover {
+    background: #000000;
+}
+
+.projeto-link {
+    display: block;
+    text-decoration: none;
+}
+
+.projeto h3 {
+    margin-bottom: 15px;
+    color: #00f800;
+    text-align: center;
+}
+
+.projeto p {
+    color: #00f800;
+    line-height: 1.6;
+}
+
+/* estilo do rodapé */
+.rodape {
+    background: #0a0a0a;
+    border-top: 1px solid rgba(0, 248, 0, 0.5);
+    padding: 25px 4%;
+    margin-top: 40px;
+}
+
+.rodape-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo-rodape img {
+    width: 120px;
+    border-radius: 12px;
+}
+
+.texto-rodape p {
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+}
+
+.email-rodape {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icone-email {
+    font-size: 18px;
+    color: #00f800;
+    line-height: 1;
+}
+
+.social-rodape {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.social-rodape a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.social-rodape a:hover {
+    color: #00f800;
 }
